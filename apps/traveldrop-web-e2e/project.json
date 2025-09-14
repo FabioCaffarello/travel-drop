@@ -1,0 +1,24 @@
+{
+  "name": "traveldrop-web-e2e",
+  "projectType": "application",
+  "root": "apps/traveldrop-web-e2e",
+  "sourceRoot": "apps/traveldrop-web-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:test",
+      "outputs": ["{workspaceRoot}/dist/apps/traveldrop-web-e2e"],
+      "options": {
+        "config": "apps/traveldrop-web-e2e/playwright.config.ts",
+        "outputPath": "dist/apps/traveldrop-web-e2e"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/traveldrop-web-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "implicitDependencies": ["traveldrop-web"],
+  "tags": []
+}

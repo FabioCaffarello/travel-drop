@@ -1,0 +1,55 @@
+{
+  "name": "traveldrop-web",
+  "projectType": "application",
+  "root": "apps/traveldrop-web",
+  "sourceRoot": "apps/traveldrop-web/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/traveldrop-web",
+        "root": "apps/traveldrop-web",
+        "fileReplacements": [],
+        "config": "apps/traveldrop-web/next.config.js"
+      },
+      "configurations": {
+        "production": {
+          "outputPath": "dist/apps/traveldrop-web",
+          "optimization": true,
+          "extractCss": true,
+          "fileReplacements": []
+        }
+      }
+    },
+    "serve-dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["npx nx dev traveldrop-web"],
+        "cwd": "{workspaceRoot}",
+        "parallel": false
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "traveldrop-web:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/traveldrop-web/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/traveldrop-web"],
+      "options": {
+        "jestConfig": "apps/traveldrop-web/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
