@@ -8,6 +8,12 @@
     },
     {
       "path": "./apps/traveldrop-web"
+    },
+    {
+      "path": "./libs/shared/react/ui"
+    },
+    {
+      "path": "./libs/shared/react/utils"
     }
   ]
 }

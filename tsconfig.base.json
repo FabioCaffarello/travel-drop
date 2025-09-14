@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "composite": true,
+    "baseUrl": ".",
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "importHelpers": true,
@@ -16,6 +17,12 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@travel-drop/source"]
+    "customConditions": ["@travel-drop/source"],
+    "paths": {
+      "@travel-drop/ui": ["libs/shared/react/ui/src"],
+      "@travel-drop/ui/*": ["libs/shared/react/ui/src/*"],
+      "@travel-drop/utils": ["libs/shared/react/utils/src"],
+      "@travel-drop/utils/*": ["libs/shared/react/utils/src/*"]
+    }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tailwind": {
+  "config": "libs/shared/react/utils/src/tailwind.config.ts",
+  "css": "libs/shared/react/utils/src/global.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "ui": "@travel-drop/ui",
+    "components": "@travel-drop/ui/components",
+    "utils": "@travel-drop/utils",
+    "hooks": "@travel-drop/ui/hooks"
+  }
+}
