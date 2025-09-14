@@ -15,7 +15,7 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["apps/traveldrop-web-e2e/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/traveldrop-web-e2e/src/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

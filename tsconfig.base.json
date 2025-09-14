@@ -19,10 +19,9 @@
     "target": "es2022",
     "customConditions": ["@travel-drop/source"],
     "paths": {
-      "@travel-drop/ui": ["libs/shared/react/ui/src"],
-      "@travel-drop/ui/*": ["libs/shared/react/ui/src/*"],
-      "@travel-drop/utils": ["libs/shared/react/utils/src"],
-      "@travel-drop/utils/*": ["libs/shared/react/utils/src/*"]
+      "@travel-drop/ui": ["libs/shared/react/ui/src/index.ts"],
+      "@travel-drop/utils": ["libs/shared/react/utils/src/index.ts"],
+      "@travel-drop/utils/global.css": ["libs/shared/react/utils/src/global.css"]
     }
   }
 }

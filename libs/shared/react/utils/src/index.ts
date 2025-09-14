@@ -1,1 +1,3 @@
-export * from './cn'
+import './global.css';
+
+export * from './cn';
