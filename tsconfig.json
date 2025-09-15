@@ -14,6 +14,15 @@
     },
     {
       "path": "./libs/shared/react/utils"
+    },
+    {
+      "path": "./utils"
+    },
+    {
+      "path": "./libs/shared/ts/utils-server"
+    },
+    {
+      "path": "./libs/shared/ts/utils-client"
     }
   ]
 }

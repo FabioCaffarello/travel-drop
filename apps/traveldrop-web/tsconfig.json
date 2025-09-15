@@ -3,11 +3,14 @@
   "compilerOptions": {
     "jsx": "preserve",
     "noEmit": true,
-    // rootDir removido para permitir imports de libs externas
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,11 +20,15 @@
         "name": "next"
       }
     ],
-    "types": ["jest", "node"],
+    "types": [
+      "jest",
+      "node"
+    ],
     "outDir": "dist",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "include": [
+    "../../dist/**/*.ts",
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "src/**/*.js",
@@ -45,6 +52,15 @@
   "references": [
     {
       "path": "../../libs/shared/react/utils"
+    },
+    {
+      "path": "../../libs/shared/ts/utils-server"
+    },
+    {
+      "path": "../../utils"
+    },
+    {
+      "path": "../../libs/shared/ts/utils-client"
     },
     {
       "path": "../../libs/shared/react/ui"
