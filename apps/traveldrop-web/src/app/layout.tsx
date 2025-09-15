@@ -1,17 +1,17 @@
 import '@travel-drop/utils/global.css';
 import { Metadata } from 'next';
 import { ThemeProvider, Toaster } from '@travel-drop/ui'
-import { Inter, Roboto_Mono } from 'next/font/google';
 
-const geistSans = Inter({
-  subsets: ['latin'],
+// Use system fonts as fallback for offline environments
+const geistSans = {
   variable: '--font-geist-sans',
-});
+  className: 'font-sans',
+};
 
-const geistMono = Roboto_Mono({
-  subsets: ['latin'],
+const geistMono = {
   variable: '--font-geist-mono',
-});
+  className: 'font-mono',
+};
 
 export const metadata: Metadata = {
   title: 'Welcome to TravelDrop',
