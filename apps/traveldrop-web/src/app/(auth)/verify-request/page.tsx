@@ -14,10 +14,11 @@ import {
 import { Loader2 } from 'lucide-react';
 import { authClient } from '@travel-drop/utils-client';
 import { useSearchParams, useRouter } from 'next/navigation';
+import React, { useState, useTransition, Suspense } from 'react';
 import { toast } from 'sonner';
-import { useState, useTransition } from 'react';
 
-export default function VerifyRequestPage() {
+
+function VerifyRequestContent() {
   const router = useRouter();
   const [otp, setOtp] = useState('');
   const [isPending, startTransition] = useTransition();
@@ -83,5 +84,13 @@ export default function VerifyRequestPage() {
         </Button>
       </CardContent>
     </Card>
+  );
+}
+
+export default function VerifyRequestPage() {
+  return (
+    <Suspense fallback={<div>Loading verification page...</div>}>
+      <VerifyRequestContent />
+    </Suspense>
   );
 }
