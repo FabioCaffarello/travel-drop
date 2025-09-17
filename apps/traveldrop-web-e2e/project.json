@@ -20,5 +20,5 @@
     }
   },
   "implicitDependencies": ["traveldrop-web"],
-  "tags": []
+  "tags": ["app:e2e", "tech:playwright", "type:test"]
 }

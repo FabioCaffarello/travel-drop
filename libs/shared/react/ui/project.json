@@ -3,7 +3,7 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/react/ui/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["shared", "type:ui", "tech:react"],
   "targets": {
     "add-component": {
       "executor": "@nx-extend/shadcn-ui:add"

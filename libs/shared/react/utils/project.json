@@ -3,7 +3,7 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/react/utils/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["shared", "type:utils", "tech:react"],
   "// targets": "to see all targets run: nx show project utils --web",
   "targets": {}
 }
