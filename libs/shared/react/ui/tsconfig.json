@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../ts/utils-client"
+    },
+    {
       "path": "../utils"
     },
     {

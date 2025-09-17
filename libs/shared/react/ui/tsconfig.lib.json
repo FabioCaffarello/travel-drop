@@ -8,8 +8,8 @@
       "@nx/react/typings/image.d.ts"
     ],
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx",    "rootDir": "src",
-
+    "jsx": "react-jsx",
+    "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo"
   },
   "exclude": [
@@ -29,6 +29,9 @@
     "eslint.config.mjs"
   ],
   "references": [
+    {
+      "path": "../../ts/utils-client/tsconfig.lib.json"
+    },
     {
       "path": "../utils/tsconfig.lib.json"
     }

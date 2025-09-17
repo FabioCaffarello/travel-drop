@@ -7,7 +7,6 @@ import {
   LayoutDashboardIcon,
   LogOutIcon,
 } from 'lucide-react';
-import { toast } from 'sonner';
 import { Avatar, AvatarFallback, AvatarImage } from '@travel-drop/ui';
 import { Button } from '@travel-drop/ui';
 import {
@@ -18,10 +17,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  useSignout,
 } from '@travel-drop/ui';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { authClient } from '@travel-drop/utils-client';
 
 interface iAppProps {
   name: string;
@@ -29,39 +27,28 @@ interface iAppProps {
   image: string;
 }
 
-export function UserDropdown({email, name, image}: iAppProps) {
-  const router = useRouter();
-  // const { data: session, isPending } = authClient.useSession();
-
-  async function signOut() {
-    await authClient.signOut({
-      fetchOptions: {
-        onSuccess: () => {
-          router.push('/'); // redirect to home page
-          toast.success('Logged out successfully');
-        },
-        onError: () => {
-          toast.error('Failed to sign out. Please try again.');
-        }
-      },
-    });
-  }
+export function UserDropdown({ email, name, image }: iAppProps) {
+  const handleSignout = useSignout();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="h-auto p-0 hover:bg-transparent">
+        <Button
+          variant="ghost"
+          className="h-auto p-0 hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
+          aria-label="Open user menu"
+        >
           <Avatar>
             <AvatarImage src={image} alt="Profile image" />
             <AvatarFallback>{name.charAt(0).toUpperCase()}</AvatarFallback>
           </Avatar>
           <ChevronDownIcon
             size={16}
-            className="opacity-60"
+            className="opacity-60 transition-transform duration-200 group-hover:rotate-180"
             aria-hidden="true"
           />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="max-w-64">
+      <DropdownMenuContent align="end" className="max-w-64 animate-fadein">
         <DropdownMenuLabel className="flex min-w-0 flex-col">
           <span className="text-foreground truncate text-sm font-medium">
             {name}
@@ -73,19 +60,19 @@ export function UserDropdown({email, name, image}: iAppProps) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem asChild>
-            <Link href="/">
+            <Link href="/" aria-label="Home">
               <Home size={16} className="opacity-60" aria-hidden="true" />
               <span className="text-muted-foreground">Home</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-            <Link href="/roadmap">
+            <Link href="/itinerary" aria-label="Itinerary">
               <BookOpen size={16} className="opacity-60" aria-hidden="true" />
-              <span className="text-muted-foreground">Roadmap</span>
+              <span className="text-muted-foreground">Itinerary</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-            <Link href="/dashboard">
+            <Link href="/admin" aria-label="Dashboard">
               <LayoutDashboardIcon
                 size={16}
                 className="opacity-60"
@@ -96,7 +83,7 @@ export function UserDropdown({email, name, image}: iAppProps) {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={signOut}>
+        <DropdownMenuItem onClick={handleSignout} aria-label="Logout">
           <LogOutIcon size={16} className="opacity-60" aria-hidden="true" />
           <span className="text-muted-foreground">Logout</span>
         </DropdownMenuItem>
