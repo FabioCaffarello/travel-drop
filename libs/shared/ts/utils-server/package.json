@@ -15,5 +15,11 @@
       "default": "./dist/index.esm.js"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "@arcjet/next": "^1.0.0-beta.11",
+    "@prisma/client": "^6.16.2",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "zod": "^4.1.8",
+    "resend": "^6.0.3"
+  }
 }

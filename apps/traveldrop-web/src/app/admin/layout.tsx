@@ -1,13 +1,12 @@
 import {
   AppSidebar,
   SiteHeader,
-  SidebarInset, 
-  SidebarProvider
+  SidebarInset,
+  SidebarProvider,
 } from '@travel-drop/ui';
 import { ReactNode } from 'react';
 
-export default function AdminLayout({ children } : { children: ReactNode }) {
-
+export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <SidebarProvider
       style={
@@ -30,5 +29,4 @@ export default function AdminLayout({ children } : { children: ReactNode }) {
       </SidebarInset>
     </SidebarProvider>
   );
-
 }

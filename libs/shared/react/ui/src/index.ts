@@ -1,6 +1,7 @@
 export * from './compoments/sidebar/app-sidebar'
 export * from './compoments/sidebar/chart-area-interactive';
 export * from './compoments/sidebar/data-table';
+export * from './compoments/shadcn/form';
 export * from './compoments/sidebar/nav-main';
 export * from './compoments/sidebar/nav-user';
 export * from './compoments/sidebar/nav-secondary';
@@ -10,6 +11,7 @@ export * from './compoments/shadcn/avatar';
 export * from './compoments/shadcn/badge';
 export * from './compoments/shadcn/button';
 export * from './compoments/shadcn/card';
+export * from './compoments/shadcn/dialog';
 export * from './compoments/shadcn/dropdown-menu';
 export * from './compoments/shadcn/input';
 export * from './compoments/shadcn/input-otp';
@@ -17,6 +19,8 @@ export * from './compoments/shadcn/label';
 export * from './compoments/shadcn/separator';
 export * from './compoments/shadcn/sidebar';
 export * from './compoments/shadcn/sonner';
+export * from './compoments/shadcn/textarea';
 export * from './compoments/shadcn/theme-provider';
 export * from './compoments/shadcn/theme-toggle';
 export * from './hooks/use-signout';
+export * from './compoments/dialog/custom-dialog-header';

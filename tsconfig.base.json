@@ -19,6 +19,15 @@
     "target": "es2022",
     "customConditions": ["@travel-drop/source"],
     "paths": {
+      "@travel-drop/features-itinerary-actions": [
+        "libs/features/itinerary/actions/src/index.ts"
+      ],
+      "@travel-drop/features-itinerary-schemas": [
+        "libs/features/itinerary/schemas/src/index.ts"
+      ],
+      "@travel-drop/features-itinerary-ui": [
+        "libs/features/itinerary/ui/src/index.ts"
+      ],
       "@travel-drop/ui": ["libs/shared/react/ui/src/index.ts"],
       "@travel-drop/utils": ["libs/shared/react/utils/src/index.ts"],
       "@travel-drop/utils-client": ["libs/shared/ts/utils-client/src/index.ts"],

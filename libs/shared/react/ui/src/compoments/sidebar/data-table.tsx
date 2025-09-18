@@ -346,7 +346,7 @@ export function DataTable({
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
-    pageSize: 10,
+    pageSize: 20,
   });
   const sortableId = React.useId();
   const sensors = useSensors(
@@ -472,7 +472,7 @@ export function DataTable({
       </div>
       <TabsContent
         value="outline"
-        className="relative flex flex-col gap-4 overflow-auto px-4 lg:px-6"
+        className="relative flex flex-col gap-4 px-4 lg:px-6"
       >
         <div className="overflow-hidden rounded-lg border">
           <DndContext

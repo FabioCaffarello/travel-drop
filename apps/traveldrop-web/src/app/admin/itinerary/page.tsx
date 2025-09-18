@@ -1,15 +1,16 @@
-import { buttonVariants } from '@travel-drop/ui';
-import Link from 'next/link';
+import { CreateItineraryDialog } from '@travel-drop/features-itinerary-ui';
 
 export default function ItineraryPage() {
   return (
     <>
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Your Itinerary</h1>
-        <Link className={buttonVariants()} href="/admin/itinerary/create">Create Itinerary</Link>
-      </div>
-      <div>
-        <h1>Here you can manage your itinerary items</h1>
+      <div className="flex-1 flex flex-col h-full">
+        <div className="flex justify-between">
+          <div className="flex flex-col">
+            <h1 className="text-3xl font-bold">Itinerary</h1>
+            <p className="text-muted-foreground">Manage your itineraries</p>
+          </div>
+          <CreateItineraryDialog triggerText="Create Itinerary" />
+        </div>
       </div>
     </>
   );

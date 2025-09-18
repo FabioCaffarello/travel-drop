@@ -1,0 +1,9 @@
+{
+  "name": "features-itinerary-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/itinerary/ui/src",
+  "projectType": "library",
+  "tags": ["feature:itinerary", "type:ui", "tech:react"],
+  "// targets": "to see all targets run: nx show project features-itinerary-ui --web",
+  "targets": {}
+}
