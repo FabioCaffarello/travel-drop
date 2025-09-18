@@ -20,28 +20,23 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
     "types": [
       "jest",
       "node"
     ],
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "./apps/traveldrop-web/dist",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "include": [
-    "../../apps/traveldrop-web/.next/types/**/*.ts",
-    "../../dist/apps/traveldrop-web/.next/types/**/*.ts",
+    ".next/types/**/*.ts",
+    "dist/.next/types/**/*.ts",
     "next-env.d.ts",
     "src/**/*.js",
+    "src/**/*.json",
     "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    ".next/types/**/*.ts"
+    "../../dist/apps/traveldrop-web/.next/types/**/*.ts"
   ],
   "exclude": [
     "out-tsc",
@@ -54,5 +49,25 @@
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"
+  ],
+  "references": [
+    {
+      "path": "../../libs/shared/react/utils"
+    },
+    {
+      "path": "../../libs/shared/ts/utils-server"
+    },
+    {
+      "path": "../../utils"
+    },
+    {
+      "path": "../../libs/shared/ts/utils-client"
+    },
+    {
+      "path": "../../libs/shared/react/ui"
+    },
+    {
+      "path": "../../libs/features/itinerary/ui"
+    },
   ]
 }

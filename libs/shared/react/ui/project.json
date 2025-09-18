@@ -1,0 +1,12 @@
+{
+  "name": "shared-react-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/react/ui/src",
+  "projectType": "library",
+  "tags": ["shared", "type:ui", "tech:react"],
+  "targets": {
+    "add-component": {
+      "executor": "@nx-extend/shadcn-ui:add"
+    }
+  }
+}

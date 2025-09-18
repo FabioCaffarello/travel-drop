@@ -8,6 +8,30 @@
     },
     {
       "path": "./apps/traveldrop-web"
+    },
+    {
+      "path": "./libs/shared/react/ui"
+    },
+    {
+      "path": "./libs/shared/react/utils"
+    },
+    {
+      "path": "./utils"
+    },
+    {
+      "path": "./libs/shared/ts/utils-server"
+    },
+    {
+      "path": "./libs/shared/ts/utils-client"
+    },
+    {
+      "path": "./libs/features/itinerary/ui"
+    },
+    {
+      "path": "./libs/features/itinerary/schemas"
+    },
+    {
+      "path": "./libs/features/itinerary/actions"
     }
   ]
 }

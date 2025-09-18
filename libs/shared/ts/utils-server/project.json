@@ -1,0 +1,9 @@
+{
+  "name": "shared-ts-utils-server",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/ts/utils-server/src",
+  "projectType": "library",
+  "tags": ["shared", "type:utils", "tech:ts", "scope:server"],
+  "// targets": "to see all targets run: nx show project utils-server --web",
+  "targets": {}
+}

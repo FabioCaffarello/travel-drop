@@ -1,5 +1,8 @@
 # See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+.env
+TODO
+
 # compiled output
 dist
 tmp
@@ -23,6 +26,7 @@ node_modules
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/mcp.json
 
 # misc
 /.sass-cache
@@ -48,3 +52,4 @@ Thumbs.db
 out
 
 test-output
+/generated/prisma

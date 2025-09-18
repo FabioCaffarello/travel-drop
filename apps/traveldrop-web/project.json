@@ -3,6 +3,7 @@
   "projectType": "application",
   "root": "apps/traveldrop-web",
   "sourceRoot": "apps/traveldrop-web/src",
+  "tags": ["app:web", "tech:next", "feature:main"],
   "targets": {
     "build": {
       "executor": "@nx/next:build",
@@ -50,6 +51,5 @@
         "passWithNoTests": true
       }
     }
-  },
-  "tags": []
+  }
 }

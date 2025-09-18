@@ -1,0 +1,8 @@
+{
+  "name": "ws-utils",
+  "root": "utils",
+  "projectType": "library",
+  "sourceRoot": "utils",
+  "targets": {},
+  "tags": ["shared", "auth", "type:utils", "tech:ts"]
+}
